@@ -1,0 +1,41 @@
+
+
+<!-- <h3>Selected Record</h3>
+<h3 style="font-size: 18px; color: green">Name: {{selectedEmployeeData.selectedName}}</h3>
+<h3 style="font-size: 18px; color: green">City: {{selectedEmployeeData.selectedCity}}</h3>
+<h3 style="font-size: 18px; color: green">Salary: {{selectedEmployeeData.selectedSalary}}</h3>
+
+<hr />
+
+<h3>Employee Records</h3>
+
+
+
+<app-products></app-products>
+
+<app-cart></app-cart> -->
+
+<!-- <app-data-load [employeeName]="employee.ename" [employeeCity]="employee.ecity" [employeeSalary]="employee.esalary" *ngFor="let employee of employee_records"></app-data-load> -->
+
+<!-- <app-data-load  [employeeName]="employee.ename" [employeeCity]="employee.ecity" [employeeSalary]="employee.esalary" *ngFor="let employee of employee_records"></app-data-load> -->
+
+
+<!-- <app-data-load 
+[employeeName]= "employee.ename" 
+[employeeCity]= "employee.ecity" 
+[employeeSalary]= "employee.esalary" 
+(sendRecord)="getRecord($event)"
+
+*ngFor='let employee of employee_records'></app-data-load> -->
+
+<ul>
+    <li>
+        <a routerLink='/'>Products</a>
+        <a routerLink='/cart'>Cart</a>
+        
+    </li>
+</ul>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

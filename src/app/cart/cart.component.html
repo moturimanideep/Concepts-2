@@ -1,0 +1,27 @@
+
+
+<div class="container-fluid" *ngIf="product">
+    <div class="row"  style="padding-bottom: 10px;">
+      
+      <div class="col-sm-3">
+        <img [src]="product.image" alt="image">
+      </div>
+      <div class="col-sm-6">
+        <h2>Name: {{product.name}}</h2>
+        <ul>
+          <li>{{product.description.ram}}</li>
+          <li>{{product.description.camera}}</li>
+          <li>{{product.description.display}}</li>
+          <li>{{product.description.battery}}</li>
+          <li>{{product.description.processor}}</li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h2>Price: {{product.price}}</h2>
+  
+        <button class="btn btn-danger" (click)='addToCart(product, i)'>Add To Cart</button>
+        
+      </div>
+      
+    </div>
+  </div>
