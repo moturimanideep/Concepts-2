@@ -7,19 +7,18 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  product: any;
+  products: any = [];
   constructor(private cartService: CartService) {
+      this.products = this.cartService.getProduct();
     
-    this.cartService.getProduct().subscribe((data: any) => {
-      this.product = data;
-      console.log(this.product);
-   })
   }
-
-  ngOnInit(){
-  }
-
-  
+ngOnInit(){
+//   this.cartService.getProduct().subscribe((data: any) => {
+//     this.products = data;
+    
+//     console.log(this.products);
+//  })
+}  
 
 
 }

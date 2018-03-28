@@ -6,7 +6,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  products1: any = [];
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
@@ -116,10 +116,11 @@ export class ProductsComponent implements OnInit {
     ];
 
     addToCart(product, index){
-      console.log(product)
+      //console.log(product)
       console.log(index);
-
-      this.cartService.SendProduct(product);
+      this.products1.push(product);
+      console.log(this.products1);
+      this.cartService.SendProduct(this.products1);
     }
 
 }

@@ -1,0 +1,51 @@
+<aside class="container">
+  <div class="row justify-content-center">
+     <div class="col-md-4 col-md-offset-4 col-md-offset-right-4"> 
+         <form [formGroup]="user" novalidate autocomplete='off' >
+          <div class="row">
+              <div class="col-xs-12">
+                  <div>
+                  <h1 style="text-align: center; font-size: 35px;">LOG IN</h1>
+                  </div>
+                  <div style="padding: 15px;">
+                      <input class="form-control" placeholder="User Name" formControlName="email" required >
+                      
+                  
+                  <div class="alert" *ngIf="user.get('email').hasError('required') && user.get('email').touched">
+                      Name is required
+                    </div>
+                    <div class="alert" *ngIf="user.get('email').hasError('minlength') && user.get('email').touched">
+                      Minimum of 6 characters
+                    </div>
+              </div>
+              <div style="padding: 15px;">
+               
+                  <input class="form-control" placeholder="Password" formControlName = "password" required>
+                 
+          
+              <div class="alert" *ngIf="user.get('password').hasError('required') && user.get('password').touched">
+                  Password is required
+                </div>
+                <div class="alert" *ngIf="user.get('password').hasError('minlength') && user.get('password').touched">
+                  Minimum of 6 characters
+                </div>
+          </div>
+          <div style="text-align: center;padding-top: 30px; padding-bottom: 10px;">
+              <button class="logbtn btn btn-success" [disabled]="user.invalid" (click)= "onSubmit(user)">Log In</button>
+          </div>
+          <div class="row" style="text-align: center; padding-top: 10px;">
+              <button class="regbtn btn btn-success"><a routerLink="/register" style="text-decoration: none; color: white; font-weight: bold; padding: 5px 60px 5px 60px;">Register</a></button>
+          </div>
+              </div>
+          </div>
+      </form>
+      </div>
+      </div>
+  </aside>
+
+
+
+
+  
+  
+  

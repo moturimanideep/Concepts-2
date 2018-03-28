@@ -1,8 +1,5 @@
-
-
-<div class="container-fluid" *ngIf="product">
-    <div class="row"  style="padding-bottom: 10px;">
-      
+<div class="container">
+    <div class="row"  style="padding-bottom: 10px;" *ngFor="let product of products">    
       <div class="col-sm-3">
         <img [src]="product.image" alt="image">
       </div>
@@ -19,9 +16,10 @@
       <div class="col-md-2">
         <h2>Price: {{product.price}}</h2>
   
-        <button class="btn btn-danger" (click)='addToCart(product, i)'>Add To Cart</button>
+        <button class="btn btn-danger">Add To Cart</button>
         
       </div>
       
     </div>
+    
   </div>
